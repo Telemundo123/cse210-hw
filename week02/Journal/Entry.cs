@@ -7,7 +7,7 @@ public class Entry
 
     public string _entryText;
 
-    public string _mood;
+    public string _mood; // This is the "Exceeding the requirements" part of the assignment. I added a mood question to the journal entry.
 
     public Entry()
     {
@@ -24,6 +24,6 @@ public class Entry
         Console.WriteLine($"{_date}");
         Console.WriteLine($"{_promptText}");
         Console.WriteLine($"{_entryText}");
-        Console.WriteLine($"{_mood}");
+        Console.WriteLine($"{_mood}"); // This is the "Exceeding the requirements" part of the assignment. I added a mood question to the journal entry.
     }
 }

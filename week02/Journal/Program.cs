@@ -28,8 +28,9 @@ class Program
             {
                 string prompt = promptGenerator.GetRandomPrompt();
                 Console.WriteLine(prompt);
-
                 string entryText = Console.ReadLine();
+                
+                // This is the "Exceeding the requirements" part of the assignment. I added a mood question to the journal entry.
                 Console.WriteLine("How are you feeling today? or What is your mood today?");
                 string mood = Console.ReadLine();
 
@@ -37,7 +38,7 @@ class Program
                 entry._date = DateTime.Now.ToShortDateString();
                 entry._promptText = prompt;
                 entry._entryText = entryText;
-                entry._mood = mood;
+                entry._mood = mood; // This is the "Exceeding the requirements" part of the assignment. I added a mood question to the journal entry.
 
                 journal._entries.Add(entry);
             }

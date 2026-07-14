@@ -25,7 +25,7 @@ public class Journal
                 entry._date = parts[0];
                 entry._promptText = parts[1];
                 entry._entryText = parts[2];
-                entry._mood = parts[3];
+                entry._mood = parts[3]; // This is the "Exceeding the requirements" part of the assignment. I added a mood question to the journal entry.
                 _entries.Add(entry);
             }
 
