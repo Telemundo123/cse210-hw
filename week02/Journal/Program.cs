@@ -49,38 +49,13 @@ class Program
             {
                 Console.Write("Enter the filename please!!: ");
                 string filename = Console.ReadLine();
-
-                using (StreamWriter output = new StreamWriter(filename))
-                {
-                    foreach (Entry entry in journal._entries)
-                    {
-                        output.WriteLine(entry.SaveFormat());
-                    }
-                }
-
-                Console.WriteLine("Journal saved.");
+                journal.saveToFile(filename);
             }
             else if (pick == 4)
             {
                 Console.Write("Enter the filename to load: ");
                 string filename = Console.ReadLine();
-                string[] lines = File.ReadAllLines(filename);
-
-                journal._entries.Clear();
-
-                foreach (string line in lines)
-                {
-                    string[] parts = line.Split('|');
-
-                    Entry entry = new Entry();
-                    entry._date = parts[0];
-                    entry._promptText = parts[1];
-                    entry._entryText = parts[2];
-                    entry._mood = parts[3];
-                    journal._entries.Add(entry);
-                }
-
-                Console.WriteLine("Entries loaded successfully.");
+                journal.loadFromFile(filename);
             }
             else if (pick == 5)
             {
